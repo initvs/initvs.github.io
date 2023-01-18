@@ -6,7 +6,7 @@
 ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-squaree&logo=lua&logoColor=white)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-squaree&logo=c%2B%2B&logoColor=white)
 
-<img src="_media/logo.png" alt="ni">
+<img src="_media/logo.png" alt="ni"><img src="_media/wechat.jpg" alt="ni">
 
 Profile Framework for World of Warcraft and its older expansions.<br>
 微信: Tontasiniva     QQ: 285645197
