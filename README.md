@@ -8,7 +8,7 @@
 
 <img src="_media/logo.png" alt="ni"><img src="_media/wechat.jpg" width="196" height="200" alt="wechat">
 
-魔兽世界扩展协助程序.<br>
+魔兽世界扩展框架,协助程序 旧版支持.<br>
 微信: Tontasiniva     QQ: 285645197
 </div>
 
