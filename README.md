@@ -16,7 +16,7 @@
 
 查看 [快速开始](https://initvs.github.io/#/getting-started/quickstart) 指南了解更多详情.
 
-##  🪙 支持
+##  🪙 功能特点
 
 ⚡️ 受保护的 Lua 函数<br>
 ⚡️ Anti Warden<br>
