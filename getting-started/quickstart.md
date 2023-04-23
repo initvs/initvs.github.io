@@ -30,8 +30,6 @@ Please do the following steps:
 
 #### 1. 在addon/Rotations/Warlock文件夹下创建一个名为`Warlock_Example.lua`的文件。你的文件夹应该看起来像这样：
 
-#### 1. Create a file called `Warlock_Example.lua` inside the folder addon/Rotations/Warlock. Your folders should look like this:
-
 ```
 addon
 └───Core
