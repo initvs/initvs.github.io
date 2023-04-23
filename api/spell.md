@@ -8,16 +8,12 @@
 
 参数:
 
-- **spell** `id|string` _技能id 或 文本_
+- **spell** `id|string` _技能id 或 名称_
 - **stutter** `boolean` _default: true_ _默认：false_
 
 Returns: `boolean` _返回值：类型：布尔值（true or false）_
 
-```
-example: ni.spell.available(686) or ni.spell.available("Shadow Bolt")
-```
-
-Checks if specified spell is available to use. Includes checks such as:
+检查指定的法术是否可以使用。包括检查，如：
 
 - [`ni.spell.gcd`](api/spell.md#gcd)
 - [`ni.vars.combar.casting`](api/vars.md)
@@ -26,65 +22,70 @@ Checks if specified spell is available to use. Includes checks such as:
 - [`ni.player.powerraw`](api/player.md)
 - [`ni.player.hpraw`](api/player.md)
 
-!> [`ni.spell.available`](api/spell.md#available) is not the same as [`ni.spell.valid`](api/spell.md#valid).
+!> [`ni.spell.available`](api/spell.md#available) 与 [`ni.spell.valid`](api/spell.md#valid)是不同的.
 
 ```lua
-if ni.spell.available("Fear") then
-  -- Fear passess all the checks and is available
+if ni.spell.available(686) then
+  -- 暗影箭 通过了所有的检查，可以使用。
 end
 ```
 
-## cast
+## cast 施法
 
 参数:
 
-- **spell** `id|string`
+- **spell** `id|string` _技能id 或 名称_
 - **target** `token|guid`
 
 Returns: `void`
 
-Casts the specified spell. If the target is provided it'll cast on that target, otherwise spell wll be casted on self.
+施放指定的法术。如果提供了目标，将对该目标施放，否则将对自己施放。
 
 ```lua
 ni.spell.cast("Shadow Bolt", "target")
 ```
 
-## delaycast
+## delaycast 延迟施法
 
 参数:
 
-- **spell** `id|string`
+- **spell** `id|string` _技能id 或 名称_
 - **target** `token|guid`
 - **delay** `number` _optional_
 
-Returns: `boolean`
+Returns: `boolean` _返回值：类型：布尔值（true or false）_
 
-Just like cast, however you can specify delay, and if the time since it's last cast was over the delay, it'll cast the spell along with returning true. If it's under the delay, the function will return false.
+就像施放一样，但是你可以指定延迟，如果距离上次施放技能的时间超过了延迟，它就会施放技能，同时返回`true`。如果低于延迟时间，该函数将返回`false`。
 
 ```lua
 if ni.spell.delaycast("Shadow Bolt", "target", 1.5) then
-	--It's been more than 1.5 seconds since we last cast 1.5, so it cast
+	--距离我们上次施放已经超过了1.5秒，所以它施放了。
 else
-	--Spell did not cast because it's been less than 1.5 seconds since last cast
+	--技能没有施放，因为距离上次施放的时间少于1.5秒。
 end
---Other usage just like normal cast, just to ensure it doesn't cast if under the delay time
+--其他用法与普通施放一样，只是为了确保在延迟时间内不会施放。
 if true then
 	ni.spell.delaycast("Shadow Bolt", "target", 1.5)
 end
 ```
 
-## bestaoeloc
+## bestaoeloc 最佳AOE地点
 
-- **distance** `number`
-- **radius** `number`
-- **friendly** `boolean` _optional_
-- **minimumcount** `number` _optional_
-- **inc** `number` _optional_
-- **zindex_inc** `number` _optional_
+- **distance** `number` _数值_
+- **radius** `number` _数值_
+- **friendly** `boolean` _optional_ _布尔值_
+- **minimumcount** `number` _optional_ _数值_
+- **inc** `number` _optional_ _数值_
+- **zindex_inc** `number` _optional_ _数值_
 
-Returns: `X/Y/Z`
+Returns: `X/Y/Z` _返回：坐标：x 坐标, y 坐标,z 坐标_
 
-This function uses the internal check for sweeping around the player to search for the best X/Y/Z coordinate to place an AoE at. The distance and radius are the only two required, the rest are optional. Friendly is to check for units you can assist if true, or that you can attack if false (default: false). minimumcount is the minimum number of units within the radius to be counted as a good location (default: 2). inc is for the incremental looping that is done, the higher the number the less efficient the scan is, but the quicker it is done; for example if a distance of 30 is passed and the increment is 1.5 it would go -30, -28.5, -27, -25.5 ... to +30 (default: 1). zindex_inc is for the readjustment to obtain a new Z for each position checked, meaning the point where the ground actually is, each point uses +increment and -increment from the players Z and uses the hit location as the new z (default: 20).
+这个函数使用内部检查来扫过玩家周围，以搜索最佳的X/Y/Z坐标来放置一个AOE。
+**distance**和**radius**是唯一需要的两项，其余的是可选的。
+**friendly**是检查你可以协助的单位（如果是真的），或者你可以攻击的单位（如果是假的）（默认：假的）。 
+**minimumcount**是半径内被算作好位置的最小单位数（默认：2）。
+**inc**是用来做增量循环的，数字越大，扫描的效率越低，但完成得越快；
+例如，如果距离是30，增量是1。 zindex_inc是用于重新调整，为每个被检查的位置获得一个新的Z，意思是地面实际所在的点，每个点使用玩家Z的+增量和-增量，并使用击中的位置作为新的Z（默认：20）。
 
 ```lua
 local x, y, z = ni.spells.bestaoeloc(30, 4, false, 6);
