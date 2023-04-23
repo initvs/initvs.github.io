@@ -1,7 +1,6 @@
 # Quick start (快速开始)
 
-Assuming you already downloaded ni from [Discord Channel] this introductory guide will help you get up to speed.
-
+Assuming you already downloaded ni from [Discord Channel] this introductory guide will help you get up to speed.\n
 假设你已经从[Discord Channel]下载了ni，这个指南将帮助你尽快上手。
 
 Lets get started with the location of profiles.
