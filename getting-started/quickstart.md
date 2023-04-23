@@ -2,12 +2,12 @@
 
 假设你已经从[Discord Channel]下载了ni，这个指南将帮助你尽快上手。
 
-``Assuming you already downloaded ni from [Discord Channel] this introductory guide will help you get up to speed.``
+Assuming you already downloaded ni from [Discord Channel] this introductory guide will help you get up to speed.
 
+让我们从配置文件的位置开始。
 
 Lets get started with the location of profiles.
 
-让我们从配置文件的位置开始。
 ```
 addon
 └───Core
@@ -18,15 +18,18 @@ addon
 ```
 
 我们感兴趣的两个文件夹是 "数据"和以我们角色的职业命名的文件夹。在本指南中，我们将为 "Warlock（术士）" 创建一个简单的配置文件。这意味着我们将专注于这两个文件夹。
+
 Two folders of our interest are `Data` and folder named by the class of our character. In this guide we will create a simple profile for `Warlock`. That means we are going to focus on these two folders.
 
 我们的配置文件需要有一个名字--在本指南中，我们将称之为 "Warlock_Example"。
+
 Our profile needs to have a name - and for this guide we will call it `Warlock_Example`.
 
 请按以下步骤进行：
 Please do the following steps:
 
 #### 1. 在addon/Rotations/Warlock文件夹下创建一个名为`Warlock_Example.lua`的文件。你的文件夹应该看起来像这样：
+
 #### 1. Create a file called `Warlock_Example.lua` inside the folder addon/Rotations/Warlock. Your folders should look like this:
 
 ```
@@ -39,6 +42,7 @@ addon
 │	│	└───Warlock_Example.lua
 ```
 2. 一旦文件创建完毕，用你最喜欢的文本编辑器打开它。[我们的建议](getting-started/faq.md#which-text-editor to use)
+
 2. Once the file is created, open it using your favourite text editor. [Our recommendation](getting-started/faq.md#which-text-editor-to-use)
 
 #### 3. 复制并粘贴以下模板代码：
