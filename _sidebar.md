@@ -1,4 +1,4 @@
-- Getting started
+- Getting started 开始
 
   - [Quick start](getting-started/quickstart.md)
   - [How to contribute](getting-started/how-to-contribute.md)
