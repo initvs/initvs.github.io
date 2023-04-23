@@ -125,11 +125,9 @@ ni.data.example = {
 ```
 
 !> 以下加载数据文件或GUI的方法已被废弃，应避免使用。请看例子[这里](https://github.com/initvs/ni-profiles/blob/main/Generic/GUIExample.lua)
-!> The following method for loading the data file or GUI is deprecated and should be avoided. Please look at the examples [here](https://github.com/initvs/ni-profiles/blob/main/Generic/GUIExample.lua)
 
 
 #### 7. 加载数据文件可以通过创建一个包含文件名字符串的表格，并将该表格作为第四个参数传递给`ni.bootstrap.profile`来完成。
-#### 7. Loading Data files can be done by creating a table which contains strings of file names and passing that table as 4th argument to `ni.bootstrap.profile`.
 
 ```lua
 local data = {
