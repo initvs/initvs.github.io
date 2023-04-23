@@ -16,7 +16,7 @@
 
 你可以通过运行这些slashs命令之一来重新加载配置文件：
 
-``lua
+```lua
 /reload ui
 /reload
 /rl
