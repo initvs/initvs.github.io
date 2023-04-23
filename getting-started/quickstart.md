@@ -1,12 +1,8 @@
 # Quick start (快速开始)
 
-假设你已经从[Discord Channel]下载了ni，这个指南将帮助你尽快上手。
-
-Assuming you already downloaded ni from [Discord Channel] this introductory guide will help you get up to speed.
+假设你已经下载了ni，这个指南将帮助你尽快上手。
 
 让我们从配置文件的位置开始。
-
-Lets get started with the location of profiles.
 
 ```
 addon
@@ -17,16 +13,11 @@ addon
 │	└───Warlock
 ```
 
-我们感兴趣的两个文件夹是 "数据"和以我们角色的职业命名的文件夹。在本指南中，我们将为 "Warlock（术士）" 创建一个简单的配置文件。这意味着我们将专注于这两个文件夹。
+我们应该在意的两个文件夹是 `数据` 和以我们 `角色职业` 命名的文件夹。在本指南中，我们将为 "Warlock（术士）" 创建一个简单的配置文件。这意味着我们将专注于这两个文件夹。
 
-Two folders of our interest are `Data` and folder named by the class of our character. In this guide we will create a simple profile for `Warlock`. That means we are going to focus on these two folders.
-
-我们的配置文件需要有一个名字--在本指南中，我们将称之为 "Warlock_Example"。
-
-Our profile needs to have a name - and for this guide we will call it `Warlock_Example`.
+我们的配置文件需要有一个名字，在本指南中，我们将配置文件命名为 "Warlock_Example"。
 
 请按以下步骤进行：
-Please do the following steps:
 
 #### 1. 在addon/Rotations/Warlock文件夹下创建一个名为`Warlock_Example.lua`的文件。你的文件夹应该看起来像这样：
 
@@ -39,12 +30,10 @@ addon
 │	└───Warlock
 │	│	└───Warlock_Example.lua
 ```
+
 2. 一旦文件创建完毕，用你最喜欢的文本编辑器打开它。[我们的建议](getting-started/faq.md#which-text-editor-to-use)
 
-2. Once the file is created, open it using your favourite text editor. [Our recommendation](getting-started/faq.md#which-text-editor-to-use)
-
 #### 3. 复制并粘贴以下模板代码：
-#### 3. Copy and paste the following boilerplate code:
 
 ```lua
 local queue = {
@@ -61,13 +50,10 @@ ni.bootstrap.profile("Warlock_Example", queue, abilities)
 ```
 
 !> 确保文件名与传递给`ni.bootstrap.profile`的名称一致。
-!> Make sure that the name of file matches the name passed to `ni.bootstrap.profile`
 
-这就是**ni**运行一个配置文件所需要的全部基本内容。按下`F12`，看看是否有`Hello`字样被打印到游戏聊天窗口。
-This is all that **ni** needs to run a profile. Presss `F12` and see if the word `Hello` is being printed to the console.
+这就是**ni**运行一个配置文件所需要的全部基本内容。进入游戏后，按下 `F10`打开设置界面，并在主要脚本处选择我们刚刚完成的`Warlock_Example`，按下`F1`启动配置，看看是否有`Hello`字样被打印到游戏聊天窗口。
 
 #### 4. 如果我们想有一个动态队列，多个队列可以实时变化，我们也可以传递一个`function'。
-#### 4. In case we would like to have a dynamic queue, multiple queues which can change in real time, we can also pass a `function`.
 
 ```lua
 local ishelloprinted = false
@@ -102,11 +88,9 @@ end
 ni.bootstrap.profile("Warlock_Example", dynamicqueue, abilities)
 ```
 
-!> 有可能只使用一种方式来设置优先级队列（静态或动态）。
-!> It's possible to only use one way to set the priority queue (either static or dynamic).
+!> 有且只能选择使用一种方式来设置优先级队列（静态或动态）。
 
 !> 以下加载数据文件的方法或已被废弃，应避免使用。请看较新的方法[这里](https://github.com/initvs/ni-profiles/blob/main/Generic/GUIExample.lua#L1)
-!> The following method for loading data files is deprecated and should be avoided. Please look at the newer method [here](https://github.com/initvs/ni-profiles/blob/main/Generic/GUIExample.lua#L1)
 
 #### 5. 如果我们有一些共同的函数或变量，我们想在多个配置文件中共享 - 我们可以通过在`Data`文件夹中创建Lua文件来实现。让我们创建`Data_Example.lua`。
 #### 5. In case we have some common functions or variables that we would like to share among multiple profiles - we can do it by creating Lua files in `Data` folder. Lets create `Data_Example.lua`.
