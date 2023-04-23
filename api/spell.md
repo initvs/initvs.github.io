@@ -1,17 +1,21 @@
-# Spell
+# Spell 技能
 
-> All functions when used will be prepended with `ni.spell`.
+> 所有的函数在使用时都会以`ni.spell.`作为前缀。
 
 ---
 
-## available
+## available 可用
 
-Arguments:
+参数:
 
-- **spell** `id|string`
-- **stutter** `boolean` _default: true_
+- **spell** `id|string` _技能id 或 文本_
+- **stutter** `boolean` _default: true_ _默认：false_
 
-Returns: `boolean`
+Returns: `boolean` _返回值：类型：布尔值（true or false）_
+
+```
+example: ni.spell.available(686) or ni.spell.available("Shadow Bolt")
+```
 
 Checks if specified spell is available to use. Includes checks such as:
 
@@ -32,7 +36,7 @@ end
 
 ## cast
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid`
@@ -47,7 +51,7 @@ ni.spell.cast("Shadow Bolt", "target")
 
 ## delaycast
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid`
@@ -123,7 +127,7 @@ ni.spell.cast("Healing Rain", 36, 4, 5); --On a shaman this would cast healing r
 
 ## castat
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid|mouse`
@@ -139,7 +143,7 @@ ni.spell.castat("Rain of Fire", "target")
 
 ## castatqueue
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid|mouse`
@@ -154,7 +158,7 @@ ni.spell.castatqueue("Blizzard", "target")
 
 ## castqueue
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid`
@@ -169,7 +173,7 @@ ni.spell.castqueue("Fear", "target")
 
 ## castspells
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid`
@@ -184,7 +188,7 @@ ni.spell.castspells("Heroic Strike|Bloodthirst", "target")
 
 ## casttime
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 
@@ -198,7 +202,7 @@ local casttime = ni.spell.casttime("Immolate") -- 1.25
 
 ## cd
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 
@@ -214,7 +218,7 @@ end
 
 ## gcd
 
-Arguments:
+参数:
 
 Returns: `boolean`
 
@@ -228,7 +232,7 @@ end
 
 ## id
 
-Arguments:
+参数:
 
 - **spellname** `string`
 
@@ -242,7 +246,7 @@ local spellid = ni.spell.id("Life Tap") -- 57946
 
 ## isinstant
 
-Arguments:
+参数:
 
 - **spell** `string|id`
 
@@ -258,7 +262,7 @@ end
 
 ## stopcasting
 
-Arguments:
+参数:
 
 Returns: `void`
 
@@ -270,7 +274,7 @@ ni.spell.stopcasting()
 
 ## stopchanneling
 
-Arguments:
+参数:
 
 Returns: `void`
 
@@ -282,7 +286,7 @@ ni.spell.stopchanneling()
 
 ## valid
 
-Arguments:
+参数:
 
 - **spell** `id|string`
 - **target** `token|guid`
