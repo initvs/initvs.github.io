@@ -89,7 +89,9 @@ Returns: `X/Y/Z` _返回：坐标：x 坐标, y 坐标,z 坐标_
 
 ```lua
 local x, y, z = ni.spells.bestaoeloc(30, 4, false, 6);
---This would return nil if there is no good location, otherwise x, y, z will be the best location to hit at least 6 mobs within a location that is at least 30 yards from the player and has a splash radius of 4 yards
+--如果没有好的位置，这将返回nil
+--否则x、y、z将是最佳位置，至少可以击中一个位置内的6个目标
+--距离玩家至少30码，并且AoE半径为4码的位置。
 ```
 
 ## castharmfulatbest
