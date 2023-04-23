@@ -1,7 +1,7 @@
 - Getting started 开始
 
   - [Quick start 快速开始](getting-started/quickstart.md)
-  - [How to contribute 如何赞助](getting-started/how-to-contribute.md)
+  - [How to contribute 如何做出贡献](getting-started/how-to-contribute.md)
   - [FAQ 疑问与解答](getting-started/faq.md)
 
 - Profiles
