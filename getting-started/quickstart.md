@@ -41,7 +41,7 @@ addon
 │	└───Warlock
 │	│	└───Warlock_Example.lua
 ```
-2. 一旦文件创建完毕，用你最喜欢的文本编辑器打开它。[我们的建议](getting-started/faq.md#which-text-editor to use)
+2. 一旦文件创建完毕，用你最喜欢的文本编辑器打开它。[我们的建议](getting-started/faq.md#which-text-editor-to-use)
 
 2. Once the file is created, open it using your favourite text editor. [Our recommendation](getting-started/faq.md#which-text-editor-to-use)
 
