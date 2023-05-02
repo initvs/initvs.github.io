@@ -108,7 +108,9 @@ Returns: `void`
 This function will cast the spell specified at the best location matching the requirements. See above for what each argument is.
 
 ```lua
-ni.spell.cast("Hurricane", 36, 4, 4); --On a druid this would cast hurricane at the best location within 36 yards of the player that has at least 4 mobs to be hit
+ni.spell.cast("Hurricane", 36, 4, 4); 
+--On a druid this would cast hurricane at the best location 
+--within 36 yards of the player that has at least 4 mobs to be hit
 ```
 
 ## casthelpfulatbest
@@ -125,7 +127,9 @@ Returns: `void`
 This function will cast the spell specified at the best location matching the requirements. See above for what each argument is.
 
 ```lua
-ni.spell.cast("Healing Rain", 36, 4, 5); --On a shaman this would cast healing rain at the best location within 36 yards of the player that has at least 5 friendlies to be hit by the heal
+ni.spell.cast("Healing Rain", 36, 4, 5); 
+--On a shaman this would cast healing rain at the best location
+--within 36 yards of the player that has at least 5 friendlies to be hit by the heal
 ```
 
 ## castat
@@ -183,7 +187,10 @@ ni.spell.castqueue("Fear", "target")
 
 Returns: `void`
 
-Casts specified spells separated by pipe (`|`). If the target is provided it'll cast on that target, otherwise spells wll be casted on self. Does not work if spells more than one spell triggers global cooldown.
+Casts specified spells separated by pipe (`|`). 
+If the target is provided it'll cast on that target,
+otherwise spells wll be casted on self. 
+Does not work if spells more than one spell triggers global cooldown.
 
 ```lua
 ni.spell.castspells("Heroic Strike|Bloodthirst", "target")
