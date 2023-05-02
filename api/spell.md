@@ -108,7 +108,7 @@ Returns: `void`
 这个函数将在符合要求的最佳位置施放指定的法术。每个参数是什么，见上文。
 
 ```lua
-ni.spell.cast("Hurricane", 36, 4, 4); 
+ni.spell.castharmfulatbest("Hurricane", 36, 4, 4); 
 --在一个德鲁伊身上，这将在最佳位置施放飓风 
 --在玩家的36码范围内，至少有4个小怪要被击中
 ```
@@ -127,7 +127,7 @@ Returns: `void`
 这个函数将在符合要求的最佳位置施放指定的法术。每个参数是什么，见上文。
 
 ```lua
-ni.spell.cast("Healing Rain", 36, 4, 5); 
+ni.spell.casthelpfulatbest("Healing Rain", 36, 4, 5); 
 --在萨满身上，这将在最佳位置施放治疗之雨
 --在玩家的36码范围内，至少有5个友军被治疗击中。
 ```
