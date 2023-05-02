@@ -116,11 +116,13 @@ Returns: `boolean`
 Checks if specified unit has certain buffs separated by `&&` or `||`.
 
 ```lua
+-- && = and 和
 if ni.unit.buffs("target", "63321&&Fel Armor", "player") then
-  -- Target has both Life Tap and Fel Armor
+  -- 目标同时拥有 63321 和 Fel Armor
 end
+-- || = or 或者
 if ni.unit.buffs("target", "63321||Fel Armor") then
-  -- Target has either Life Tap, or Fel Armor
+  -- 目标拥有 Life Tap 或者 Fel Armor
 end
 ```
 
@@ -133,7 +135,7 @@ end
 
 Returns: `boolean`
 
-Checks if specified unit has certain buff types. Multiple types can be passed by using the pipe character (`|`).
+检查指定的单位是否有某些缓冲区类型。可以通过使用管道字符（`|`）传递多个类型。
 
 | Type   |
 | ------ |
@@ -142,7 +144,7 @@ Checks if specified unit has certain buff types. Multiple types can be passed by
 
 ```lua
 if ni.unit.bufftype("target", "Enrage|Magic") then
-        -- Target has either a Enrage or Magic debuff present
+        -- 目标有激怒或魔法的debuff存在
 end
 ```
 
@@ -154,11 +156,11 @@ end
 
 Returns: `number`
 
-The combat reach of the unit checked (default return of 0).
+被检查单位的作战范围（默认返回0）。
 
 ```lua
 local combatreach = ni.unit.combatreach("player");
--- Would most likely print 1.5 as the combat reach of the player unit
+-- 最有可能的是将1.5打印成玩家单位的战斗范围
 ```
 
 ## creations
@@ -169,14 +171,14 @@ local combatreach = ni.unit.combatreach("player");
 
 Returns: `table|nil`
 
-Table of all the units checked creations (i.e. totems, pets) or nil if there is none.
+所有被检查的创造单位的表格（即图腾、宠物），如果没有则为零。
 
 ```lua
 local creations = ni.unit.creations("player");
 
 for i = 1, #creations do
   local creature = creations[i]
-  -- Do something
+  -- 做点什么
 end
 ```
 
