@@ -30,7 +30,7 @@ if ni.spell.available(686) then
 end
 ```
 
-## cast 施法
+## cast
 
 参数:
 
@@ -45,7 +45,7 @@ Returns: `void`
 ni.spell.cast("Shadow Bolt", "target")
 ```
 
-## delaycast 延迟施法
+## delaycast
 
 参数:
 
@@ -69,7 +69,7 @@ if true then
 end
 ```
 
-## bestaoeloc 最佳AOE地点
+## bestaoeloc
 
 - **distance** `number` _数值_
 - **radius** `number` _数值_
