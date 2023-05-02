@@ -105,7 +105,7 @@ local x, y, z = ni.spells.bestaoeloc(30, 4, false, 6);
 
 Returns: `void`
 
-This function will cast the spell specified at the best location matching the requirements. See above for what each argument is.
+这个函数将在符合要求的最佳位置施放指定的法术。每个参数是什么，见上文。
 
 ```lua
 ni.spell.cast("Hurricane", 36, 4, 4); 
@@ -124,7 +124,7 @@ ni.spell.cast("Hurricane", 36, 4, 4);
 
 Returns: `void`
 
-This function will cast the spell specified at the best location matching the requirements. See above for what each argument is.
+这个函数将在符合要求的最佳位置施放指定的法术。每个参数是什么，见上文。
 
 ```lua
 ni.spell.cast("Healing Rain", 36, 4, 5); 
@@ -142,7 +142,7 @@ ni.spell.cast("Healing Rain", 36, 4, 5);
 
 Returns: `void`
 
-Casts specified spell which required click on the ground (e.g. Death and Decay, Rain of Fire, Blizzard).
+施放需要点击地面的指定法术（如死亡和腐烂，火雨，暴风雪）。
 
 ```lua
 ni.spell.castat("Rain of Fire", "target")
@@ -157,7 +157,7 @@ ni.spell.castat("Rain of Fire", "target")
 
 Returns: `void`
 
-Queues a specified spell to be casted on the ground once it's available.
+排队等待一个指定的法术，一旦它可用，就在地上施放。
 
 ```lua
 ni.spell.castatqueue("Blizzard", "target")
@@ -172,7 +172,7 @@ ni.spell.castatqueue("Blizzard", "target")
 
 Returns: `void`
 
-Queues a specified spell to be casted once it's available.
+排队等待一个指定的法术，一旦它可用，就会被施放。
 
 ```lua
 ni.spell.castqueue("Fear", "target")
@@ -187,10 +187,10 @@ ni.spell.castqueue("Fear", "target")
 
 Returns: `void`
 
-Casts specified spells separated by pipe (`|`). 
-If the target is provided it'll cast on that target,
-otherwise spells wll be casted on self. 
-Does not work if spells more than one spell triggers global cooldown.
+施放由（`|`）分隔的指定法术。
+如果提供了目标，它将对该目标施放、
+否则，将对自己施放法术。
+如果一个以上的法术触发了全局冷却时间，则不起作用。
 
 ```lua
 ni.spell.castspells("Heroic Strike|Bloodthirst", "target")
@@ -204,7 +204,7 @@ ni.spell.castspells("Heroic Strike|Bloodthirst", "target")
 
 Returns: `number`
 
-Calculates the cast time of specified spell.
+计算指定法术的施法时间。
 
 ```lua
 local casttime = ni.spell.casttime("Immolate") -- 1.25
@@ -218,7 +218,7 @@ local casttime = ni.spell.casttime("Immolate") -- 1.25
 
 Returns: `number`
 
-Calculates specified spell's cooldown. If the spell is not on cooldown returns 0.
+计算指定法术的冷却时间。如果该法术不在冷却时间内，则返回0。
 
 ```lua
 if not ni.spell.cd(47891) then
@@ -232,7 +232,7 @@ end
 
 Returns: `boolean`
 
-Checks if global cooldown is triggered.
+检查是否触发了全局冷却时间。
 
 ```lua
 if not ni.spell.gcd() then
@@ -248,7 +248,7 @@ end
 
 Returns: `number|nil`
 
-Converts spell's name into spell id. If spell doesn't exist returns nil.
+将法术的名称转换为法术的ID。如果法术不存在，则返回nil。
 
 ```lua
 local spellid = ni.spell.id("Life Tap") -- 57946
@@ -306,7 +306,7 @@ ni.spell.stopchanneling()
 
 Returns: `boolean`
 
-This functions ensures that a spell can be casted at specific target. It includes checks such as:
+这个功能确保一个法术可以在特定的目标上施展。它包括检查，如：
 
 !> [`ni.spell.valid`](api/spell.md#valid) is not the same as [`ni.spell.available`](api/spell.md#available).
 
