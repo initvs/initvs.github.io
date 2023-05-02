@@ -4,7 +4,7 @@
 
 ---
 
-## available 可用
+## available
 
 参数:
 
