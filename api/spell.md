@@ -109,8 +109,8 @@ Returns: `void`
 
 ```lua
 ni.spell.cast("Hurricane", 36, 4, 4); 
---On a druid this would cast hurricane at the best location 
---within 36 yards of the player that has at least 4 mobs to be hit
+--在一个德鲁伊身上，这将在最佳位置施放飓风 
+--在玩家的36码范围内，至少有4个小怪要被击中
 ```
 
 ## casthelpfulatbest
@@ -128,8 +128,8 @@ Returns: `void`
 
 ```lua
 ni.spell.cast("Healing Rain", 36, 4, 5); 
---On a shaman this would cast healing rain at the best location
---within 36 yards of the player that has at least 5 friendlies to be hit by the heal
+--在萨满身上，这将在最佳位置施放治疗之雨
+--在玩家的36码范围内，至少有5个友军被治疗击中。
 ```
 
 ## castat
@@ -222,7 +222,7 @@ Returns: `number`
 
 ```lua
 if not ni.spell.cd(47891) then
-  -- Shadow Ward is not on cooldown
+  -- Shadow Ward 不在冷却时间内
 end
 ```
 
