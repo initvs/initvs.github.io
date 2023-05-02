@@ -1,54 +1,54 @@
 # Unit
 
-> All functions when used will be prepended with `ni.unit`.
+> 所有函数在使用时都会在前面加上 `ni.unit`.
 
 ---
 
 ## aura
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **aura** `id|name`
 
 Returns: `boolean`
 
-Checks if specified unit has aura (this check is more than wow's UnitAura as it can return true for passive auras not seen by the normal client).
+检查指定的单位是否有光环（这个检查比wow的UnitAura更有意义，因为它可以对普通客户端看不到的被动光环返回true）。
 
 ```lua
 if ni.unit.aura("player", 32223) then
-  -- Player has Crusader Aura
+  -- 玩家拥有十字军光环
 end
 if ni.unit.aura("player", "Crusader Aura") then
-	--Player has Crusader Aura
+	--玩家拥有十字军光环
 end
 ```
 
 ## auras
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
 Returns: `table`
 
-Returns a table of all the auras on the unit with their ID and name (able to see auras that are not normally seen by the client with this, this function is more for developers to get a list of all auras on a unit to use with the aura function).
+返回一个单元上所有光环的表格，包括它们的ID和名称（能够看到客户端通常看不到的光环，这个函数更多的是为开发者提供一个单元上所有光环的列表，以便与光环函数一起使用）。
 
 ```lua
 local auras = ni.unit.auras("target");
 for k, v in ipairs(auras) do
 	if v.name == "Crusader Aura" then
-		--The unit has the aura Crusader Aura by name check
+		--该单位有光环十字军光环的名称检查
 	end
 	if v.ID == 32223 then
-		--The unit has the aura Crusader Aura by ID check
+		--通过身份检查，该单位拥有十字军光环。
 	end
 end
 ```
 
 ## buff
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **id** `name|id`
@@ -56,20 +56,20 @@ Arguments:
 
 Returns: `UnitBuff`
 
-Checks if specified unit has certain buff.
+检查指定的单位是否有某些BUFF。
 
 ```lua
 if ni.unit.buff("target", "Life Tap", "player") then
-  -- Target has Life Tap active
+  -- 目标已激活生命之光
 end
 if ni.unit.buff("player", 533, "exact") then
-  -- Player has the buff that exactly matches ID 533
+  -- 玩家拥有与ID 533完全匹配的BUFF
 end
 ```
 
 ## buffremaining
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **id** `name|id`
@@ -77,17 +77,17 @@ Arguments:
 
 Returns: `boolean`
 
-Calculates the remaining time of the buff on target in seconds.
+计算目标上的BUFF的剩余时间，单位是秒。
 
 ```lua
 if ni.unit.buffremaining("target", 48441, "player") < 5 then
-  -- Target has Rejuvenation for less than 5 seconds
+  -- 目标拥有回春术的时间不超过5秒
 end
 ```
 
 ## buffstacks
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **id** `name|id`
@@ -95,17 +95,17 @@ Arguments:
 
 Returns: `number`
 
-Obtains the number of buff stacks on target.
+获得目标上的BUFF堆积数。
 
 ```lua
 if ni.unit.buffstacks("target", 1234) < 5 then
-  -- Target has less than 5 stacks of 1234 on them
+  -- 目标光环1234 的stack数小于5
 end
 ```
 
 ## buffs
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **ids** `name|id`
@@ -126,7 +126,7 @@ end
 
 ## bufftype
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **types** `string|string`
@@ -148,7 +148,7 @@ end
 
 ## combatreach
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -163,7 +163,7 @@ local combatreach = ni.unit.combatreach("player");
 
 ## creations
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -182,7 +182,7 @@ end
 
 ## creator
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -200,7 +200,7 @@ end
 
 ## creaturetype
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -235,7 +235,7 @@ end
 
 ## debuff
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **id** `name|id`
@@ -256,7 +256,7 @@ end
 
 ## debuffstacks
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **id** `name|id`
@@ -274,7 +274,7 @@ end
 
 ## debuffremaining
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **id** `name|id`
@@ -292,7 +292,7 @@ end
 
 ## debuffs
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **ids** `name|id`
@@ -313,7 +313,7 @@ end
 
 ## debufftype
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 - **types** `string|string`
@@ -337,7 +337,7 @@ end
 
 ## distance
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **target** `guid|token`
@@ -354,7 +354,7 @@ end
 
 ## enemiesinrange
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **range** `number`
@@ -376,7 +376,7 @@ end
 
 ## exists
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -392,7 +392,7 @@ end
 
 ## friendsinrange
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **range** `number`
@@ -414,7 +414,7 @@ end
 
 ## hasheal
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -430,7 +430,7 @@ end
 
 ## hp
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -446,7 +446,7 @@ end
 
 ## hppredicted
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -464,7 +464,7 @@ end
 
 ## hpraw
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -480,7 +480,7 @@ end
 
 ## id
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -496,7 +496,7 @@ end
 
 ## info
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -510,7 +510,7 @@ local x, y, z, facing, unittype, target, height = ni.unit.info("target")
 
 ## inmelee
 
-Arguments:
+参数:
 
 - **unit1** `token|guid`
 - **unit2** `token|guid`
@@ -527,7 +527,7 @@ end
 
 ## isbehind
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **target** `guid|token`
@@ -544,7 +544,7 @@ end
 
 ## isboss
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -560,7 +560,7 @@ end
 
 ## iscasting
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -576,7 +576,7 @@ end
 
 ## ischanneling
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -592,7 +592,7 @@ end
 
 ## isdisarmed
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -608,7 +608,7 @@ end
 
 ## isdummy
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -624,7 +624,7 @@ end
 
 ## isfacing
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **target** `guid|token`
@@ -645,7 +645,7 @@ end
 
 ## isfleeing
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -661,7 +661,7 @@ end
 
 ## isimmune
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -677,7 +677,7 @@ end
 
 ## islootable
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -693,7 +693,7 @@ end
 
 ## islooting
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -709,7 +709,7 @@ end
 
 ## ismounted
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -725,7 +725,7 @@ end
 
 ## ismoving
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -741,7 +741,7 @@ end
 
 ## ispacified
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -757,7 +757,7 @@ end
 
 ## isplayer
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -773,7 +773,7 @@ end
 
 ## isplayercontrolled
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -789,7 +789,7 @@ end
 
 ## ispossessed
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -805,7 +805,7 @@ end
 
 ## ispreparation
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -821,7 +821,7 @@ end
 
 ## ispvpflagged
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -837,7 +837,7 @@ end
 
 ## issilenced
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -853,7 +853,7 @@ end
 
 ## isskinnable
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -869,7 +869,7 @@ end
 
 ## isstunned
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -885,7 +885,7 @@ end
 
 ## istaggedbyme
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -901,7 +901,7 @@ end
 
 ## istaggedbyother
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -917,7 +917,7 @@ end
 
 ## istotem
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -933,7 +933,7 @@ end
 
 ## los
 
-Arguments:
+参数:
 
 - **targetfrom** `guid|token|x,y,z`
 - **targetto** `guid|token|x,y,z`
@@ -955,7 +955,7 @@ end
 
 ## meleerange
 
-Arguments:
+参数:
 
 - **unit1** `token|guid`
 - **unit2** `token|guid`
@@ -970,7 +970,7 @@ ni.unit.meleerange("player", "target")
 
 ## power
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **type** `string` _optional_
@@ -987,7 +987,7 @@ end
 
 ## powerraw
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **type** `string` _optional_
@@ -1004,7 +1004,7 @@ end
 
 ## readablecreaturetype
 
-Arguments:
+参数:
 
 - **target** `guid|token`
 
@@ -1039,7 +1039,7 @@ end
 
 ## threat
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **unittargeted** `guid|token` _optional_
@@ -1054,7 +1054,7 @@ local threat = ni.unit.threat("player", "target")
 
 ## ttd
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -1070,7 +1070,7 @@ end
 
 ## unitstargeting
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 - **friendlies** `boolean` _default: false_
@@ -1092,7 +1092,7 @@ end
 
 ## location
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -1107,7 +1107,7 @@ local x, y, z = ni.unit.location("target");
 
 ## transport
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
@@ -1124,7 +1124,7 @@ end
 
 ## facing
 
-Arguments:
+参数:
 
 - **unit** `guid|token`
 
