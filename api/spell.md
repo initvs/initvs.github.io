@@ -236,7 +236,7 @@ Returns: `boolean`
 
 ```lua
 if not ni.spell.gcd() then
-  -- Global cooldown is not active, we can do something
+  -- 全局冷却时间没有激活，我们可以做一些事情
 end
 ```
 
@@ -262,11 +262,11 @@ local spellid = ni.spell.id("Life Tap") -- 57946
 
 Returns: `boolean`
 
-Checks if passed spell is instant cast.
+检查通过的法术是否为即时施法。
 
 ```lua
 if ni.spell.isinstant(57946) then
-  -- Life Tap is instant spell
+  -- Life Tap 是即时法术，没有施法时间。
 end
 ```
 
@@ -276,7 +276,7 @@ end
 
 Returns: `void`
 
-Stops casting.
+停止施法。
 
 ```lua
 ni.spell.stopcasting()
@@ -288,7 +288,7 @@ ni.spell.stopcasting()
 
 Returns: `void`
 
-Stops channeling.
+停止引导。
 
 ```lua
 ni.spell.stopchanneling()
@@ -316,6 +316,6 @@ Returns: `boolean`
 
 ```lua
 if ni.spell.valid("Fear", "target") then
-  -- Fear meets all of the critera to be valid
+  -- Fear 恐惧符合所有有效的标准
 end
 ```
