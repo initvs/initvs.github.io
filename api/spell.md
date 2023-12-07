@@ -298,8 +298,8 @@ ni.spell.stopchanneling()
 
 参数:
 
-- **spell** `id|string`
 - **target** `token|guid`
+- **spell** `id|string`
 - **facing** `boolean` _default: false_
 - **los** `boolean` _default: false_
 - **friendly** `boolean` _default: false_
