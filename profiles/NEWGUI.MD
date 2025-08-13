@@ -1,6 +1,6 @@
 
 
-<img src="_media/NEWGUI.png" alt="NEWGUI">
+<img src="https://raw.githubusercontent.com/initvs/initvs.github.io/refs/heads/main/_media/NEWFRAMEXAMPLE.png" alt="NEWGUI">
 
 ## function
 
