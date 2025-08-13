@@ -11,11 +11,17 @@
 - **type** `固定类型|string` `iconradio`
 - **key** `键值|string` 
 - **single** `布尔值|true|false`
-- **selected** `布尔值`
+- **options.id** `数字|int`
+- **options.text** `文本|string|图标链接`
+- **options.tooltip** `文本|string|鼠标提示`
+- **options.selected** `布尔值|bool|是|否|勾选`
+
 
 返回: `1|0`, `1则为true, 0则为false`
 
+
 说明：界面交互，生成菜单界面 如·上图·所示.
+
 
 
 ## 示例：
