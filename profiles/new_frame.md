@@ -28,9 +28,9 @@
     key = "kmp",
     single = true,-- 单选模式：只能选一项 false 多选模式：可以勾选多个图标 如 判断技能是否启用。
     options = {
-    { id = 1, text = skills.Obliterate.iconname, tooltip = "KM 消耗优先：湮灭 > 冰霜打击", selected = true },
-    { id = 2, text = skills.HowlingBlast.iconname, tooltip = "KM 消耗优先：凛风冲击(无消耗) > 湮灭 > 冰霜打击", selected = false  },
-    { id = 3, text = skills.FrostStrike.iconname, tooltip = "KM 消耗优先：冰霜打击", selected = false  },
+    { id = 1, text = 这里是图标地址, tooltip = "这里是 tooltip! 鼠标提示！", selected = true },
+    { id = 2, text = 这里是图标地址, tooltip = "这里是 tooltip! 鼠标提示！", selected = false  },
+    { id = 3, text = 这里是图标地址, tooltip = "这里是 tooltip! 鼠标提示！", selected = false  },
 },
 
 --############# GetSetting部分 #############--
