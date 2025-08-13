@@ -10,4 +10,4 @@
 
 [Scotts GUI Example](https://github.com/initvs/ni-profiles/blob/main/Rotations/Generic/GUIExample.lua)
 
-[NEW GUI FRAME EXAMPLE](/NEWICONSFRAME.MD)
+[NEW GUI FRAME EXAMPLE](api/NEWICONSFRAME.MD)
