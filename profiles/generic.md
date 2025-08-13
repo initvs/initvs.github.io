@@ -9,3 +9,5 @@
 [Scotts Anti-AFK](https://github.com/initvs/ni-profiles/blob/main/Generic/Anti-AFK.lua)
 
 [Scotts GUI Example](https://github.com/initvs/ni-profiles/blob/main/Rotations/Generic/GUIExample.lua)
+
+[NEW GUI FRAME EXAMPLE](https://github.com/initvs/ni-profiles/blob/main/Rotations/Generic/NEWGUI.MD)
