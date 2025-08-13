@@ -40,7 +40,7 @@
 },
 
 --############# GetSetting部分 #############--
---///////////////////////////
+
 local function GetSetting(name)
     for k, v in ipairs(items) do
       if v.type == "entry" and v.key ~= nil and v.key == name then
