@@ -1,6 +1,6 @@
 
 
-###撒扽扽东发动
+## 并列排序的图标并支持勾选框的界面配置方案
 
 <img src="https://raw.githubusercontent.com/initvs/initvs.github.io/refs/heads/main/_media/NEWFRAMEXAMPLE.png" alt="NEW FRAME">
 
