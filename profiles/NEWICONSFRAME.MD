@@ -19,8 +19,9 @@
 ## 示例：
 
 ```lua
---##菜单中的items部分##
---///////////////////////////
+
+--#############菜单中的items部分#############--
+
 {   type = "iconradio",
     key = "kmp",
     single = true,-- 单选模式：只能选一项 false 多选模式：可以勾选多个图标 如 判断技能是否启用。
@@ -30,7 +31,7 @@
     { id = 3, text = skills.FrostStrike.iconname, tooltip = "KM 消耗优先：冰霜打击", selected = false  },
 },
 
---GetSetting部分
+--############# GetSetting部分 #############--
 --///////////////////////////
 local function GetSetting(name)
     for k, v in ipairs(items) do
@@ -47,7 +48,7 @@ local function GetSetting(name)
       if v.type == "input" and v.key ~= nil and v.key == name then
         return v.value
       end
--------==添加该类型的界面交互：==-----------------------------------------------
+-------#############添加该类型的界面交互：#############-------------------------
       if v.type == "iconradio" and v.key ~= nil and v.key == name then
         if v.single then
           for _, opt in ipairs(v.options) do
@@ -67,8 +68,8 @@ local function GetSetting(name)
 
 
 
----------回调函数部分
---///////////////////////////
+--------############# callback回调函数部分 #############
+
 local function GUICallback(key, item_type, value)
     if item_type == "enabled" then
       enables[key] = value
@@ -78,17 +79,14 @@ local function GUICallback(key, item_type, value)
       inputs[key] = value
     elseif item_type == "menu" then
       menus[key] = value
--------==添加该类型的界面交互：==-----------------------------------------------
+-------#############添加该类型的界面交互：#############==-----------------------
     elseif item_type == "iconradio" then
       options[key] = value
     end
 ------------------------------------------------------------------------------
 end
 
-
-
-
 }
 
---///////////////////////////
+
 ```
